@@ -59,7 +59,7 @@ const Navbar = () => {
           ))}
         </ul>
 
-        <div className="flex justify-center items-center">
+        {/* <div className="flex justify-center items-center">
           <img
             src={toggle ? close : menu}
             alt="menu"
@@ -89,7 +89,7 @@ const Navbar = () => {
               ))}
             </ul>
           </div>
-        </div>
+        </div> */}
       </div>
     </nav>
   );

@@ -13,23 +13,20 @@ const App = () => {
         <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center flex flex-col">
           <Navbar />
           <Hero />
-
-          <Announcement />
+        <HallofFame cl />
+          
         </div>
-        <HallofFame />
+        <div className="flex flex-col">
+        <Announcement />
         <About />
+        </div>
+        
         <div className="relative z-0 ">
           <div className="flex flex-col  md:flex-row">
             <Contact />
-            <div className = "flex justify-center mx-auto ">
-              
-            </div>
-
             <Contact2 />
-
-
           </div>
-          <Footer/>
+          <Footer />
           <StarsCanvas />
         </div>
       </div>

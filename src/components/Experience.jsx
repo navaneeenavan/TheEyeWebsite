@@ -1,15 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { styles } from "../styles";
 import { Adithya } from "../assets";
 import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "../utils/motion";
 import { SectionWrapper } from "../HOC";
+import { HallofFame as Hall } from "../Constants/api";
+import axios from "axios";
 
 const HallofFame = () => {
+  const [cont, setCont] = useState(null);
+
+  useEffect(() => {
+    axios
+      .get("https://api.cseatheeye.com/home")
+      .then((res) => {
+        setCont(res.data);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
+  }, []);
+
   return (
-    <div className="flex flex-col relative mt-24">
+    <div className="flex flex-col  mt-24">
       <motion.div variants={textVariant()}>
-        <motion.h1 variants={fadeIn("", "", 0.1, 1)}
+        <motion.h1
+          variants={fadeIn("", "", 0.1, 1)}
           className={`${styles.heroHeadText} flex justify-center blue-text-gradient`}
         >
           Hall of Fame
@@ -20,42 +36,21 @@ const HallofFame = () => {
         variants={fadeIn("right", "spring", 0.5, 0.75)}
         className="flex flex-col md:flex-row justify-center gap-10 mx-auto mt-10 "
       >
-        {/* card degin */}
-        <Card name="Adithya Rengarajan R" designation="Founder The EYE">
-          The work they did. The work they did. The work they did. The work they
-          did. The work they did. The work they did.
-        </Card>
-        <Card name="Adithya Rengarajan R" designation="Founder The EYE">
-          The work they did. The work they did. The work they did. The work they
-          did. The work they did. The work they did.
-        </Card>
-        <Card name="Adithya Rengarajan R" designation="Founder The EYE">
-          The work they did. The work they did. The work they did. The work they
-          did. The work they did. The work they did.
-        </Card>
+        {cont && cont.HOF.names ?
+          cont.HOF.names.map((value, idx) => <Card name={value} key={idx} />) : "Loading..."}
       </motion.div>
     </div>
   );
 };
 
-const Card = ({ name, children, designation }) => {
+const Card = ({ name }) => {
   return (
-    <div className="flex flex-col h-64 w-96 rounded-md bg-violet-500 pl-8">
-      <h1 className="pt-8">⭐️ ⭐️ ⭐️ ⭐️ ⭐️</h1>
-      <p className="pt-5">{children}</p>
-      <div className="flex flex-row">
-        <div>
-          <p className="pt-5 text-gray-900 text-sm">{name}</p>
-          <p className="text-gray-700 text-sm">{designation}</p>
-        </div>
-        <img
-          src={Adithya}
-          alt=""
-          className="border-2 rounded-full h-16 w-20 object-contain ml-10 mt-2"
-        />
+    <div className="flex flex-col h-32 w-60 rounded-md border-[1px] border-violet-700  justify-center">
+      <div className="flex flex-row justify-center">
+        <p className="flex items-center  text-sm text-white">{name}</p>
       </div>
     </div>
   );
 };
 
-export default SectionWrapper(HallofFame, "Halloffame");
+export default SectionWrapper(HallofFame, "Home");
