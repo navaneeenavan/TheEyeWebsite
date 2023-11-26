@@ -4,7 +4,6 @@ import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
 import { eyeLogo, meta } from "../assets";
 
-
 const Hero = () => {
   return (
     <section className="relative w-full h-screen mx-auto">
@@ -62,20 +61,16 @@ const Hero = () => {
                   individuals dedicated to safeguarding the digital realm.
                   Here's why you should consider joining us:
                 </p>
-                
+
                 <p className="mt-3 ml-10 text-gray-400">
                   #CyberSecurity #JoinTheEye Join us, and together, let's secure
                   a safer digital future! 🔐🌐💻
-                  
                 </p>
-                <button className="cursor-pointer flex justify-center mt-5 ml-10 h-7 text-center w-24 rounded-md border-[1px] text-gray-400 border-violet-500 bg-transparent hover:fill-slate-400 ">
-                  <a href="https://join.cseatheeye.com/auth">
-                      Join US
-                  </a>
-                </button>
+                
+                <div className="cursor-pointer">
+                  <a href="https://join.cseatheeye.com/auth">Join Us</a>
+                </div>
               </div>
-
-              
             </div>
           </div>
         </div>
@@ -84,4 +79,4 @@ const Hero = () => {
   );
 };
 
-export default Hero
+export default Hero;
