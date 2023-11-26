@@ -67,5 +67,5 @@ const Announcement = () => {
   );
 };
 
-export default SectionWrapper(Announcement, "Announcements");
+export default SectionWrapper(Announcement, "Home");
 

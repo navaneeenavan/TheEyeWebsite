@@ -64,7 +64,7 @@ const Contact2 = () => {
     >
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
-        className="flex-[70] bg-black-100 p-8 rounded-2xl"
+        className="flex-[100] bg-black-100 p-8 rounded-2xl "
       >
         <p className={styles.sectionSubText}>Report Incident</p>
         <h3 className={styles.sectionHeadText}>Incident Reporting Form</h3>

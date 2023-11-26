@@ -40,21 +40,24 @@ const footer = () => {
           <a href="https://cert-in.org.in/">CERT-IN</a>
         </ul>
       </div>
-      <ul className="flex flex-col justify-center items-center md:flex-row gap-32 pb-5">
+      <ul className="flex flex-col justify-center items-center md:flex-row gap-10 pb-5">
         <a href="https://www.instagram.com/welcometotheeye/">
-          <AiOutlineInstagram size={50} />
+          <AiOutlineInstagram size={30} md:size={50} />
         </a>
 
         <a href="https://www.linkedin.com/company/visio-protectoris">
-          <AiOutlineLinkedin size={50} />
+          <AiOutlineLinkedin size={30} md:size={50} />
         </a>
         <a href="https://medium.com/@welcometotheeye">
-          <AiOutlineMediumWorkmark size={50} />
+          <AiOutlineMediumWorkmark size={30} md:size={50} />
         </a>
       </ul>
-      <div className="flex flex-col md:flex-row justify-center opacity-50 mb-20 mt-10 ml-7">
-        Website Developed by OCULUS UI TEAM | All Rights reserved 2023 | Join
-        the Eye
+      <div className="flex flex-col justify-center items-center md:flex-row  opacity-50 mb-20 mt-10 ml-7">
+        <div>Website Developed by OCULUS UI TEAM </div>
+        
+        <div className="ml-2">
+        <a href="https://join.cseatheeye.com/auth">JOIN THE EYE</a>
+           </div>
       </div>
     </footer>
   );

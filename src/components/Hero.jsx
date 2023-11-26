@@ -68,12 +68,10 @@ const Hero = () => {
                   a safer digital future! 🔐🌐💻
                   
                 </p>
-                <button className=" flex justify-center mt-5 ml-10 h-7 text-center w-24 rounded-md border-[1px] text-gray-400 border-violet-500 bg-transparent hover:fill-slate-400">
+                <button className="cursor-pointer flex justify-center mt-5 ml-10 h-7 text-center w-24 rounded-md border-[1px] text-gray-400 border-violet-500 bg-transparent hover:fill-slate-400 ">
                   <a href="https://join.cseatheeye.com/auth">
-                  Join US
+                      Join US
                   </a>
-                  
-
                 </button>
               </div>
 
