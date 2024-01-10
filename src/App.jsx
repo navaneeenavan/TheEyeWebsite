@@ -9,7 +9,7 @@ import Contact2 from "./components/contact2";
 const App = () => {
   return (
     <BrowserRouter>
-      <div className="relative z-0 bg-primary ">
+      <div className="relative z-0 bg-primary overflow-hidden">
         <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center flex flex-col">
           <Navbar />
           <Hero />
