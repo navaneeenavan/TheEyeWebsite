@@ -18,7 +18,7 @@ const footer = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logo} alt="logo" className="w-96 h-96 object-contain" />
+          <img src={logo} alt="logo" className="w-60 h-60 object-contain" />
         </Link>
       </div>
       {/* <p className="mx-auto mb-5">Important Links to Visit </p> */}
