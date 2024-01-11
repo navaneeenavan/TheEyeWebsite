@@ -14,7 +14,7 @@ const App = () => {
           <Navbar />
           <Hero />
         </div>
-        <div className="flex flex-col mt-56">
+        <div className="flex flex-col items-center  mt-56">
           <Announcement />
           <HallofFame />
           <About />

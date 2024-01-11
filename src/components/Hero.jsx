@@ -67,9 +67,9 @@ const Hero = () => {
                   a safer digital future! 🔐🌐💻
                 </p>
                 
-                <button className="cursor-pointer" onClick={()=>window.open("https://join.cseatheeye.com/auth", "_blank")}>
+                {/* <button className="cursor-pointer" onClick={()=>window.open("https://join.cseatheeye.com/auth", "_blank")}>
                   Join us 
-                </button>
+                </button> */}
               </div>
             </div>
           </div>
